@@ -7,6 +7,7 @@ import Layout from './components/Layout/Layout';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MenuManager from './pages/Menu/MenuManager';
+import OrderManager from './pages/Orders/OrderManager';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -45,12 +46,7 @@ function App() {
                 <Route path="menu" element={<MenuManager />} />
                 
                 {/* Pedidos */}
-                <Route path="orders" element={
-                  <div className="page-placeholder">
-                    <h2>Gestión de Pedidos</h2>
-                    <p>Página en desarrollo...</p>
-                  </div>
-                } />
+                <Route path="orders" element={<OrderManager />} />
                 
                 {/* Pagos */}
                 <Route path="payments" element={

@@ -86,7 +86,7 @@
   - Conectar con API del backend para operaciones CRUD
   - _Requerimientos: 2.1, 2.2, 2.3, 2.4, 2.5, 8.1_
 
-- [ ] 13. Implementar gestión de pedidos en el frontend
+- [x] 13. Implementar gestión de pedidos en el frontend
   - Crear componente OrdersPage para visualizar pedidos
   - Implementar componente OrderCard para mostrar detalles de pedidos
   - Agregar funcionalidad de actualización de estados de pedidos
