@@ -1,0 +1,394 @@
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+/* Info Card Base */
+.info-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Status Card */
+.status-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.status-indicator.open {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-indicator.closed {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.today-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.hours-label {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.hours-time {
+  font-weight: 600;
+}
+
+.show-hours-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.show-hours-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.full-hours {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.hours-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-name {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.day-hours {
+  font-weight: 600;
+}
+
+/* Contact Card */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contact-item svg {
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.contact-value {
+  color: #1f2937;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.contact-value.link {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-value.link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Features Card */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.feature-item svg {
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.feature-item span {
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Description Card */
+.description-text {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Policies Card */
+.policies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.policy-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.policy-item strong {
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.policy-item span {
+  color: #6b7280;
+  font-size: 0.8125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .restaurant-info {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-info {
+    gap: 1rem;
+  }
+  
+  .info-card {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .status-indicator {
+    justify-content: center;
+  }
+  
+  .rating {
+    justify-content: center;
+  }
+  
+  .today-hours {
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .show-hours-button {
+    padding: 0.5rem;
+  }
+  
+  .contact-item {
+    gap: 0.5rem;
+  }
+  
+  .contact-content {
+    gap: 0.125rem;
+  }
+  
+  .contact-label {
+    font-size: 0.6875rem;
+  }
+  
+  .contact-value {
+    font-size: 0.875rem;
+  }
+  
+  .feature-item {
+    padding: 0.5rem;
+  }
+  
+  .feature-item span {
+    font-size: 0.8125rem;
+  }
+  
+  .policy-item {
+    padding: 0.5rem;
+  }
+  
+  .policy-item strong {
+    font-size: 0.8125rem;
+  }
+  
+  .policy-item span {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .restaurant-info {
+    gap: 0.75rem;
+  }
+  
+  .info-card {
+    padding: 0.75rem;
+  }
+  
+  .status-indicator {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .today-hours {
+    font-size: 0.875rem;
+  }
+  
+  .hours-row {
+    font-size: 0.875rem;
+  }
+  
+  .description-text {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    padding: 0.5rem;
+  }
+  
+  .card-title {
+    font-size: 0.8125rem;
+  }
+  
+  .contact-item {
+    align-items: center;
+  }
+  
+  .contact-content {
+    gap: 0;
+  }
+  
+  .features-grid {
+    gap: 0.5rem;
+  }
+  
+  .feature-item {
+    padding: 0.375rem 0.5rem;
+  }
+  
+  .policies-list {
+    gap: 0.5rem;
+  }
+  
+  .policy-item {
+    padding: 0.375rem 0.5rem;
+  }
+}

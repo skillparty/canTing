@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './contexts/AuthContext';
+import { CartProvider } from './contexts/CartContext';
 import Layout from './components/Layout/Layout';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MenuManager from './pages/Menu/MenuManager';
 import OrderManager from './pages/Orders/OrderManager';
 import PaymentManager from './pages/Payments/PaymentManager';
+import RestaurantPage from './pages/Restaurant/RestaurantPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -27,11 +29,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <Router>
+        <CartProvider>
+          <Router>
           <div className="App">
             <Routes>
               {/* Ruta de login */}
               <Route path="/login" element={<Login />} />
+              
+              {/* Ruta pública del restaurante */}
+              <Route path="/restaurant/:slug" element={<RestaurantPage />} />
               
               {/* Rutas protegidas */}
               <Route path="/" element={
@@ -123,6 +129,7 @@ function App() {
             />
           </div>
         </Router>
+        </CartProvider>
       </AuthProvider>
     </QueryClientProvider>
   );
