@@ -8,6 +8,7 @@ import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MenuManager from './pages/Menu/MenuManager';
 import OrderManager from './pages/Orders/OrderManager';
+import PaymentManager from './pages/Payments/PaymentManager';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -49,12 +50,7 @@ function App() {
                 <Route path="orders" element={<OrderManager />} />
                 
                 {/* Pagos */}
-                <Route path="payments" element={
-                  <div className="page-placeholder">
-                    <h2>Gestión de Pagos</h2>
-                    <p>Página en desarrollo...</p>
-                  </div>
-                } />
+                <Route path="payments" element={<PaymentManager />} />
                 
                 {/* Analíticas */}
                 <Route path="analytics" element={

@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Search, 
-  Filter, 
   RefreshCw, 
-  Plus,
   AlertCircle,
   CheckCircle,
   Package,
@@ -68,8 +66,7 @@ const OrderManager = () => {
 
   // Calcular estadísticas
   const calculateStats = (ordersData) => {
-    const today = new Date().toDateStringS
-tring();
+    const today = new Date().toDateString();
     
     const newStats = {
       total: ordersData.length,
